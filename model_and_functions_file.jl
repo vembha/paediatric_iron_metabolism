@@ -79,8 +79,8 @@ function model_iron_homeostasis!(du, u, p, t)
     du[4]  = dVitC       = D_V - ϕ_V*VitC;
     du[5]  = dLfFe       = D_L - k_L*LfFe - ϕ_L*LfFe;
     du[6]  = dLumenFe3   = D_Fe3 - c_max*LumenFe3*(K_pH/(K_pH + pH))*(1 + (VitC/(K_Vit + VitC))) - ϕ_Fe3*LumenFe3;
-    du[7]  = dLumenFe2   = D_Fe2 + c_max*LumenFe3*(K_pH/(K_pH + pH))*(1 + (VitC/(K_Vit + VitC))) - κ_Fe*P*LumenFe2/(K_Fe + LumenFe2) - k_enter*LumenFe2*β/(β + FtFe) - ϕ_Fe2*LumenFe2;
-    du[8]  = dLIP        = k_enter*LumenFe2*β/(β + FtFe) + k_L*LfFe + k_1*FtFe - k_2*Ft*LIP - k_utilize*LIP - k_fpn*LIP*θ/(θ + H);
+    du[7]  = dLumenFe2   = D_Fe2 + c_max*LumenFe3*(K_pH/(K_pH + pH))*(1 + (VitC/(K_Vit + VitC))) - κ_Fe*P*LumenFe2/(K_Fe + LumenFe2) - k_enter*LumenFe2*(β^2)/(β^2 + FtFe^2) - ϕ_Fe2*LumenFe2;
+    du[8]  = dLIP        = k_enter*LumenFe2*(β^2)/(β^2 + FtFe^2) + k_L*LfFe + k_1*FtFe - k_2*Ft*LIP - k_utilize*LIP - k_fpn*LIP*θ/(θ + H);
     du[9]  = dFt         = k_1*FtFe - k_2*LIP*Ft;
     du[10] = dFtFe       = k_2*LIP*Ft - k_1*FtFe;
     du[11] = dB          = μ_B*B*(1 - B/η_B) - α_BP*B*P;

@@ -24,13 +24,13 @@ phi_Fe3,12
 D_Fe2,0
 kappa_Fe,6.00E-11
 K_Fe,0.40625
-k_enter,24
-beta,5E-15
+k_enter,30
+beta,1.00E-14
 phi_Fe2,12
 k_1,1
 k_2,1.00E-08
 k_utilize,1.00E-02
-k_fpn,120.6
+k_fpn,100
 theta,0.0014
 mu_B,7.2
 eta_B,2.50E+06
@@ -42,7 +42,7 @@ mu_P,0.72
 eta_P,2.50E+06
 a_Fe,0
 p_max,2.00E+10
-epsilon,7.00E+10
+epsilon,6.00E+10
 zeta,0.02
 delta_R,0.005775
 f_p,5.00E-11
